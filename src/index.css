@@ -1,0 +1,146 @@
+* {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 34px;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 30px;
+    padding: 0 0 10px 0;
+}
+
+li {
+    padding: 5px 0;
+    cursor: pointer;
+    display: block;
+}
+
+#root {
+    display: flex;
+
+}
+
+.inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.marker {
+    fill: green;
+}
+
+.left__bar {
+    width: 350px;
+    padding: 20px 0;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.left__bar > h2, .left__bar > span {
+    padding: 0 10px;
+}
+
+.tag {
+    border: 1px solid green;
+    color: green;
+    font-weight: 100;
+    border-radius: 3px;
+    padding: 3px 8px;
+    margin-right: 10px;
+}
+
+.tag--active {
+    border: 1px solid green;
+    color: green;
+}
+
+.tag--stopped {
+    border: 1px solid red;
+    color: red;
+}
+
+.list {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.item {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+}
+
+.item--active {
+    background-color: whitesmoke;
+}
+
+.item strong,
+.item span {
+    line-height: 30px;
+}
+
+.action {
+    margin: 10px 0 0 0;
+}
+
+.action button {
+    margin-right: 10px;
+}
+
+button {
+    padding: 3px 8px;
+    background: none;
+    border: 1px solid #BBB;
+    border-radius: 3px;
+}
+
+button:hover {
+
+}
+
+@keyframes scaleTransition {
+    0% {
+        scale: 0.65;
+        transform-origin: center center;
+    }
+
+    100% {
+        scale: 1;
+        transform-origin: center center;
+    }
+}
+
+#tracking-pin__animation {
+    animation: scaleTransition 1s ease infinite alternate;
+}
+
+
+@media only screen and (max-device-width: 750px) {
+
+    #root {
+        flex-direction: column-reverse;
+    }
+
+    .left__bar {
+        width: 100%;
+        height: auto;
+    }
+}
